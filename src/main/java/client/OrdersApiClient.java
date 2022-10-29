@@ -12,7 +12,7 @@ public class OrdersApiClient extends BaseHttpClient {
         ArrayList<String> ids = new ArrayList<>();
 
         for (Ingredient ing : ingredients) {
-            ids.add(ing._id);
+            ids.add(ing.ingredientNumber);
         }
 
         CreateOrderRequest request = new CreateOrderRequest(ids);
@@ -23,7 +23,7 @@ public class OrdersApiClient extends BaseHttpClient {
         ArrayList<String> ids = new ArrayList<>();
 
         for (Ingredient ing : ingredients) {
-            ids.add(ing._id);
+            ids.add(ing.ingredientNumber);
         }
 
         CreateOrderRequest request = new CreateOrderRequest(ids);

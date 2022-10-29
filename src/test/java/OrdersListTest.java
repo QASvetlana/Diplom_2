@@ -14,7 +14,7 @@ public class OrdersListTest {
 
     @Before
     public void prepare() {
-        User newUser = new User("teffffestmail.ru", "tffffrd", "ffffer");
+        User newUser = new User("tefffgestmail.ru", "tfgfrd", "fffger");
 
         Response createUserRawResponse = this.userApiClient.createUser(newUser);
         CreateUserResponse createUserResponse = createUserRawResponse.body().as(CreateUserResponse.class);

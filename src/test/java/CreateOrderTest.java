@@ -34,7 +34,7 @@ public class CreateOrderTest {
     @Test
     @DisplayName("Create order for authorized user")
     public void createOrderForAuthorizedUserTest() {
-        User newUser = new User("tffgccil@teccccl.ccm", "teccccword", "Tvvvver");
+        User newUser = new User("tffccil@teccccl.ccm", "tfcccword", "Tvvfer");
 
         Response createUserRawResponse = this.userApiClient.createUser(newUser);
         CreateUserResponse createUserResponse = createUserRawResponse.body().as(CreateUserResponse.class);
@@ -81,7 +81,7 @@ public class CreateOrderTest {
     @Test
     @DisplayName("Create order with wrong ingredient")
     public void createOrderWithWrongIngredientTest() {
-        Ingredient wrongIngredient = new Ingredient("some wrong id");
+        Ingredient wrongIngredient = new Ingredient();
         ArrayList<Ingredient> appliedIngredients = new ArrayList<>();
         appliedIngredients.add(wrongIngredient);
 
@@ -92,7 +92,7 @@ public class CreateOrderTest {
     @Test
     @DisplayName("Create order with two ingredients, with wrong item")
     public void createOrderWithOneWrongIngredientTest() {
-        Ingredient wrongIngredient = new Ingredient("some wrong id");
+        Ingredient wrongIngredient = new Ingredient();
         ArrayList<Ingredient> appliedIngredients = new ArrayList<>();
         appliedIngredients.add(this.ingredients.get(0));
         appliedIngredients.add(wrongIngredient);

@@ -1,19 +1,17 @@
 package models;
 
 public class Ingredient {
-    public String _id;
+    public String ingredientNumber;
 
-    public Ingredient(String _id) {
-        this._id = _id;
+    public String ingredientNumber(String ingredientNumber) {
+        return ingredientNumber;
     }
 
-    public Ingredient() {}
-
-    public String get_id() {
-        return _id;
+    public String getIngredientNumber() {
+        return ingredientNumber;
     }
 
-    public void set_id(String _id) {
-        this._id = _id;
+    public void setIngredientNumber(String ingredientNumber) {
+        this.ingredientNumber = ingredientNumber;
     }
 }

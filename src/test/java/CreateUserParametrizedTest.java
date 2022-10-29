@@ -27,9 +27,9 @@ public class CreateUserParametrizedTest {
     @Parameterized.Parameters
     public static Object[][] dataForTest() {
         return new Object[][]{
-                {"", "yeeevc", "fjeeeeh", "Email, password and name are required fields"},
-                {"hfffj@khk.fk", "", "ffffjg", "Email, password and name are required fields"},
-                {"hfffjh@ff.fg", "offfff36", "", "Email, password and name are required fields"},
+                {"", "yeegvc", "fjeegeh", "Email, password and name are required fields"},
+                {"hffgfj@khk.fk", "", "ffgfjg", "Email, password and name are required fields"},
+                {"hfgfjh@ff.fg", "ofgfff36", "", "Email, password and name are required fields"},
                 {"", "", "", "Email, password and name are required fields"},
         };
     }

@@ -16,7 +16,7 @@ public class ChangeUserDataApiTest {
 
     @Before
     public void createUser() {
-        this.user = new User("fdsfd@ddd.ud", "6dddd66", "Moidddd");
+        this.user = new User("fd3d@ddd.ud", "6d3d66", "Mo3ddd");
         Response response = userApiClient.createUser(this.user);
         CreateUserResponse res = response.body().as(CreateUserResponse.class);
         this.accessToken = res.accessToken;
@@ -30,7 +30,7 @@ public class ChangeUserDataApiTest {
     @Test
     @DisplayName("Change user name with auth")
     public void ChangeUserNameAuthTest() {
-        User user = new User(this.user.getEmail(), this.user.getPassword(), "ddgddddddddd");
+        User user = new User(this.user.getEmail(), this.user.getPassword(), "ddgddfddddd");
         Response response = userApiClient.changeUserInfo(user, accessToken);
         response.then().statusCode(200).and().body("success", equalTo(true));
     }
@@ -38,7 +38,7 @@ public class ChangeUserDataApiTest {
     @Test
     @DisplayName("Change user email with auth")
     public void ChangeUserEmailAuthTest() {
-        User user = new User("ddfvvvvil@jkn.jj", this.user.getPassword(), this.user.getName());
+        User user = new User("ddffil@jkn.jj", this.user.getPassword(), this.user.getName());
         Response response = userApiClient.changeUserInfo(user, accessToken);
         response.then().statusCode(200).and().body("success", equalTo(true));
     }
@@ -46,7 +46,7 @@ public class ChangeUserDataApiTest {
     @Test
     @DisplayName("Change user password with auth")
     public void ChangeUserPasswordAuthTest() {
-        User user = new User(this.user.getEmail(), "1bbbb111", this.user.getName());
+        User user = new User(this.user.getEmail(), "1bbf111", this.user.getName());
         Response response = userApiClient.changeUserInfo(user, accessToken);
         response.then().statusCode(200).and().body("success", equalTo(true));
     }
@@ -54,7 +54,7 @@ public class ChangeUserDataApiTest {
     @Test
     @DisplayName("Change user Data without authorization")
     public void changeUserDataWithoutAuthorizationTest() {
-        User user = new User("hbbbhd@nmm.op", "1bb8", "bbban");
+        User user = new User("hbfbhd@nmm.op", "1fb8", "bfan");
         Response response = userApiClient.changeUserInfoWithoutAuthorization(user);
         response.then().statusCode(401).and().body("message", equalTo("You should be authorised"));
     }

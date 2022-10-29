@@ -3,15 +3,15 @@ package models;
 import java.util.ArrayList;
 
 public class Order {
-    public String _id;
+    public String ingredientNumber;
     public int number;
     public String name;
     public ArrayList<String> ingredients;
     public String createdAt;
     public String updatedAt;
 
-    public Order(String _id, int number, String name, ArrayList<String> ingredients, String createdAt, String updatedAt) {
-        this._id = _id;
+    public Order(String ingredientNumber, int number, String name, ArrayList<String> ingredients, String createdAt, String updatedAt) {
+        this.ingredientNumber = ingredientNumber;
         this.number = number;
         this.name = name;
         this.ingredients = ingredients;
@@ -29,12 +29,12 @@ public class Order {
         this.number = number;
     }
 
-    public String get_id() {
-        return _id;
+    public String getIngredientNumber() {
+        return ingredientNumber;
     }
 
-    public void set_id(String _id) {
-        this._id = _id;
+    public void set_id(String ingredientNumber) {
+        this.ingredientNumber = ingredientNumber;
     }
 
     public String getName() {

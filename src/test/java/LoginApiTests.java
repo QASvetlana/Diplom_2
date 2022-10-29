@@ -10,12 +10,12 @@ import static org.hamcrest.CoreMatchers.equalTo;
 public class LoginApiTests {
     UserApiClient userApiClient = new UserApiClient();
     User user;
-    String wrongEmail = "gkffh@hnnk.8f9";
-    String wrongPassword = "qffyyuiiop";
+    String wrongEmail = "gkgfh@hnnk.8f9";
+    String wrongPassword = "qffyguiiop";
 
     @Before
     public void createUser() {
-        this.user = new User("hkfffkjd@hkn.Kl", "678fff9hbg", "Vlffff6");
+        this.user = new User("hkffgkjd@hkn.Kl", "6gfff9hbg", "Vlgfff6");
         this.userApiClient.createUser(this.user);
     }
 

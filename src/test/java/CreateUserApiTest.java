@@ -21,7 +21,7 @@ public class CreateUserApiTest {
     @Test
     @DisplayName("create user test")
     public void createUserTest() {
-        this.user = new User("dahvver77vyt@hvl.Kv", "6vvvvbg", "Dvsv9");
+        this.user = new User("ddver77vyt@hvl.Kv", "6vfvvbg", "Dgsv9");
         Response response = this.userApiClient.createUser(this.user);
 
         CreateUserResponse res = response.body().as(CreateUserResponse.class);
@@ -33,12 +33,12 @@ public class CreateUserApiTest {
     @Test
     @DisplayName("create two same user")
     public void createTwoSameUser() {
-        this.user = new User("vvv@bnvv.jv", "vvvvbskgf", "vvvv77");
+        this.user = new User("vgv@bnvv.jv", "vvgvbskgf", "vvg77");
         Response response = this.userApiClient.createUser(this.user);
         CreateUserResponse res = response.body().as(CreateUserResponse.class);
         this.accessToken = res.accessToken;
 
-        User sameUser = new User("Gvvvg@bnmv.jv", "78vvkgf", "vvvvv7");
+        User sameUser = new User("Gvgvg@bnmv.jv", "78gkgf", "vgv7");
         Response response1 = this.userApiClient.createUser(sameUser);
         response1.then().statusCode(403).and().body("message", equalTo("User already exists"));
     }
